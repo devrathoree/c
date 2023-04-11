@@ -4,7 +4,7 @@ pipeline {
        stage('Build Code') {
            steps {
                sh """
-               echo "Building Artifact"
+               run conda activate env34 && pyhton manage.py runserver
                """
            }
        }
